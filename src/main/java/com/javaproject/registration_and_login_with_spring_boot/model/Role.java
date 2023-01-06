@@ -4,7 +4,6 @@ package com.javaproject.registration_and_login_with_spring_boot.model;
 import jakarta.persistence.*;
 
 
-
 @Entity
 @Table(name = "role")
 public class Role {
