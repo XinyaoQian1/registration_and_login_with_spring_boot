@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 import java.util.Collection;
 // make it JPA entities
-
 @Entity
 @Table(name =  "user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {

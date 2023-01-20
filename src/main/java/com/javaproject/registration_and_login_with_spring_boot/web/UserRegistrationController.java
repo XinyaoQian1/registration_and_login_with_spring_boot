@@ -2,6 +2,7 @@ package com.javaproject.registration_and_login_with_spring_boot.web;
 
 
 import com.javaproject.registration_and_login_with_spring_boot.service.UserService;
+
 import com.javaproject.registration_and_login_with_spring_boot.web.dto.UserRegistrationDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +25,9 @@ public class UserRegistrationController {
 
     // handler ()里面没看懂
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto){
+    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
         userService.save(registrationDto);
         return "redirect:/registration?success";
-
     }
 
     // shortcut for @RequestMapping(method = RequestMethod.GET)
