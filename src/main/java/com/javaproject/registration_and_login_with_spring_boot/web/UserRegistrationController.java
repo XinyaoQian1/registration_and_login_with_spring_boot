@@ -22,6 +22,11 @@ public class UserRegistrationController {
         this.userService = userService;
     }
 
+    @ModelAttribute("user")
+    public UserRegistrationDto userRegistrationDto() {
+        return new UserRegistrationDto();
+    }
+
 
     // handler ()里面没看懂
     @PostMapping
